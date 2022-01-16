@@ -33,4 +33,4 @@ jobs:
         aws-region: eu-west-1
     - name: deploy
       run: |
-          aws lambda update-function-code --function-name=basic-function --zip-file=file://lambda.zip
+          aws lambda update-function-code --function-name=basic-function --zip-file=fileb://lambda.zip
