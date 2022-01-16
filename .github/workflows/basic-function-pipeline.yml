@@ -1,0 +1,36 @@
+name: Basic function pipeline
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./basic-function
+    steps:
+    - uses: actions/checkout@v2
+    - name: Add target
+      run: rustup target add x86_64-unknown-linux-musl
+    - name: Build
+      run: cargo build --release --target x86_64-unknown-linux-musl
+    - name: Create .zip file
+      run: |
+        cp target/x86_64-unknown-linux-musl/release/basic-function bootstrap
+        zip lambda.zip bootstrap
+    - name: Configure AWS Credentials  
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} 
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-west-1
+    - name: deploy
+      run: |
+          aws lambda update-function-code --function-name=basic-function --zip-file=file://lambda.zip
