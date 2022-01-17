@@ -3,6 +3,9 @@ name: Basic function pipeline
 on:
   push:
     branches: [ master ]
+    paths:
+        - 'basic-function/**'
+        - '.github/workflows/basic-function.pipeline.yml'
 
 env:
   CARGO_TERM_COLOR: always
