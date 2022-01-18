@@ -9,4 +9,4 @@ This repository provides examples on how to run Rust on AWS Lambda.
   
 ### Incoming:   
 2. Serverless CRUD operation with Rust on AWS: Part 2 - how to deploy multiple functions with Terraform
-3. Serverless CRUD operation with Rust on AWS: Part 2 - how to interact with other services from Rust
+3. Serverless CRUD operation with Rust on AWS: Part 3 - how to interact with other services from Rust
