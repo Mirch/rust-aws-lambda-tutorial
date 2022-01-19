@@ -10,3 +10,8 @@ This repository provides examples on how to run Rust on AWS Lambda.
 ### Incoming:   
 2. Serverless CRUD operations with Rust on AWS: Part 2 - how to deploy multiple functions with Terraform
 3. Serverless CRUD operations with Rust on AWS: Part 3 - how to interact with other services from Rust
+
+
+## Repository structure
+
+The `./basic-function` folder contains the code for the Rust function developed in the first part of the series. The pipeline for deploying this function to AWS can be found in `./github/workflows/basic-function-pipeline.yml`.
