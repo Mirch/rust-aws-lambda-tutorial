@@ -1,4 +1,12 @@
+# macOS files
 *.DS_Store
-*/target
+# Rust & build files
+*target
 bootstrap
 *.zip
+
+# terraform 
+*.terraform.lock.hcl
+*.tfstate
+*.backup
+*.terraform
