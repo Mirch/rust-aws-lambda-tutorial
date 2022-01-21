@@ -4,6 +4,8 @@
 *target
 bootstrap
 *.zip
+*.lock
+*.info
 
 # terraform 
 *.terraform.lock.hcl
