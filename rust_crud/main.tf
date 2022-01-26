@@ -11,6 +11,14 @@ terraform {
   }
 
   required_version = "~> 1.0"
+
+  cloud {
+    organization = "mirch"
+
+    workspaces {
+      name = "rust-aws-lambda-tutorial"
+    }
+  }
 }
 
 provider "aws" {
