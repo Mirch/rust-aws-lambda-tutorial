@@ -24,7 +24,7 @@ for function_folder in function_folders:
     print(f"[BUILD] Creating {function_folder} output file...")
     
     # create the bootstrap file
-    commands.append(f"cp {project_folder}/target/{build_target}/release/{function_folder} {function_folder}_{output_file_name}")
+    commands.append(f"cp {project_folder}/target/{build_target}/release/{function_folder} bin/{function_folder}/{output_file_name}")
     
     os.system("; ".join(commands))
     commands.clear()
