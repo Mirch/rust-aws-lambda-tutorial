@@ -11,7 +11,7 @@ variable "get_user_bin_path" {
   description = "The binary path for the get_user lambda."
 
   type    = string
-  default = "./lambda_functions/get_user/bootstrap"
+  default = "./users/get_user/bootstrap"
 }
 
 variable "create_user_bin_path" {

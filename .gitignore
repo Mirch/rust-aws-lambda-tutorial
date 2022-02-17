@@ -2,7 +2,7 @@
 *.DS_Store
 # Rust & build files
 *target
-bootstrap
+*bootstrap
 *.zip
 *.lock
 *.info
