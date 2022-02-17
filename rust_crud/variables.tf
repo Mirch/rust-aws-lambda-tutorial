@@ -11,26 +11,26 @@ variable "get_user_bin_path" {
   description = "The binary path for the get_user lambda."
 
   type    = string
-  default = "./users/get_user/bootstrap"
+  default = "./get_user_bootstrap"
 }
 
 variable "create_user_bin_path" {
   description = "The binary path for the create_user lambda."
 
   type    = string
-  default = "./lambda_functions/create_user/bootstrap"
+  default = "./create_user_bootstrap"
 }
 
 variable "update_user_bin_path" {
   description = "The binary path for the update_user lambda."
 
   type    = string
-  default = "./lambda_functions/update_user/bootstrap"
+  default = "./update_user_bootstrap"
 }
 
 variable "delete_user_bin_path" {
   description = "The binary path for the delete_user lambda."
 
   type    = string
-  default = "./lambda_functions/delete_user/bootstrap"
+  default = "./delete_user_bootstrap"
 }
