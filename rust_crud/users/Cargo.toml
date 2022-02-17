@@ -1,0 +1,39 @@
+[package]
+name = "users"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "lambda_layer"
+path = "src/lib/mod.rs"
+
+[[bin]]
+doc = false
+name = "create_user"
+path = "src/bin/create_user/main.rs"
+
+[[bin]]
+doc = false
+name = "get_user"
+path = "src/bin/get_user/main.rs"
+
+[[bin]]
+doc = false
+name = "update_user"
+path = "src/bin/update_user/main.rs"
+
+[[bin]]
+doc = false
+name = "delete_user"
+path = "src/bin/delete_user/main.rs"
+
+[dependencies]
+aws-config = "0.6.0"
+aws-sdk-dynamodb = "0.6.0"
+lambda_http = "0.4.1"
+lambda_runtime = "0.4.1"
+serde = "1.0.134"
+serde_json = "1.0.75"
+tokio = "1.15.0"
