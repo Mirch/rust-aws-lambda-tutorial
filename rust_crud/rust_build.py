@@ -19,12 +19,14 @@ os.system("; ".join(commands))
 commands.clear()
 
 print("[BUILD] Starting Rust functions building process...")
+commands.append("mkdir bin")
 function_folders = [name for name in os.listdir(project_source_folder)]
 for function_folder in function_folders:
     print(f"[BUILD] Creating {function_folder} output file...")
     
     # create the bootstrap file
-    commands.append(f"cp {project_folder}/target/{build_target}/release/{function_folder} bin/{function_folder}/{output_file_name}")
+    commands.append(f"mkdir bin/{function_folder}")
+    commands.append(f"cp {project_folder}/target/{build_target}/release/{function_folder} ./bin/{function_folder}/{output_file_name}")
     
     os.system("; ".join(commands))
     commands.clear()
