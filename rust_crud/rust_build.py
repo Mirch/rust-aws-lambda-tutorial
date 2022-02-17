@@ -7,6 +7,8 @@ output_file_name = "bootstrap"
 
 
 commands = []
+print("[BUILD] Installing musl-tools...")
+commands.append("sudo apt install musl-tools")
 print("[BUILD] Building the Rust project...")
 # move to project folder
 commands.append(f"cd {project_source_folder}")
